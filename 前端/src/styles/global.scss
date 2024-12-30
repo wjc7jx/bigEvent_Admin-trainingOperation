@@ -1,0 +1,206 @@
+// 全局变量
+:root {
+  --primary-color: #409eff;
+  --success-color: #67c23a;
+  --warning-color: #e6a23c;
+  --danger-color: #f56c6c;
+  --info-color: #909399;
+  --text-color: #303133;
+  --border-radius: 4px;
+  --transition-duration: 0.3s;
+  --box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+// 全局动画
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity var(--transition-duration) ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all var(--transition-duration) ease;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+// 全局样式
+.page-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  min-height: calc(100vh - 120px);
+  transition: all var(--transition-duration);
+  
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    
+    span {
+      font-size: 18px;
+      font-weight: bold;
+      color: var(--text-color);
+    }
+  }
+}
+
+// 表单样式
+.el-form {
+  max-width: 800px;
+  margin: 0 auto;
+  
+  .el-form-item {
+    margin-bottom: 25px;
+    
+    &__label {
+      font-weight: 500;
+    }
+  }
+  
+  .el-input,
+  .el-select {
+    transition: all var(--transition-duration);
+    
+    &:hover,
+    &:focus {
+      transform: translateY(-2px);
+    }
+  }
+  
+  .el-button {
+    padding: 12px 25px;
+    transition: all var(--transition-duration);
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+// 表格样式
+.el-table {
+  margin-top: 20px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  
+  th {
+    background-color: #f5f7fa !important;
+    font-weight: bold;
+  }
+  
+  td {
+    padding: 12px 0;
+  }
+  
+  .el-button {
+    padding: 6px 12px;
+    transition: all var(--transition-duration);
+    
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// 卡片样式
+.el-card {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: all var(--transition-duration);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .el-card__header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    background-color: #f5f7fa;
+  }
+}
+
+// 抽屉样式
+.el-drawer {
+  .el-drawer__header {
+    margin-bottom: 0;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    
+    span {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+  
+  .el-drawer__body {
+    padding: 20px;
+  }
+}
+
+// 分页样式
+.el-pagination {
+  margin-top: 20px;
+  padding: 15px 0;
+  justify-content: flex-end;
+  
+  .el-pagination__total,
+  .el-pagination__sizes {
+    margin-right: 15px;
+  }
+  
+  .el-pager li {
+    transition: all var(--transition-duration);
+    
+    &:hover,
+    &.active {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// 图片预览
+.image-preview {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: all var(--transition-duration);
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// 编辑器样式
+.editor-container {
+  border: 1px solid #dcdfe6;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  
+  .ql-toolbar {
+    border-bottom: 1px solid #dcdfe6;
+    background-color: #f5f7fa;
+  }
+  
+  .ql-container {
+    min-height: 300px;
+  }
+}
